@@ -12,6 +12,8 @@ Install `cmake` on macOS
 brew install cmake
 ```
 
+Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#installation
+
 Installation
 ```bash
 cd ~/.vim/bundle/YouCompleteMe
