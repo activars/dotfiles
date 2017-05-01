@@ -1,11 +1,12 @@
-### vim configuration
+## vim-config
 
+This is a personal vim + tmux configuration.
 
 #### Install Plugin via Vundle
 
 `:PluginInstall`
 
-#### Post install for YouCompleteMe Plugin
+#### Prerequisite 
 
 Install `cmake` on macOS
 ```
@@ -14,7 +15,9 @@ brew install cmake
 
 Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#installation
 
-Installation
+
+#### Installation
+
 ```bash
 # compile and install YCM
 cd ~/.vim/bundle/YouCompleteMe
