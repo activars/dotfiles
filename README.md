@@ -22,10 +22,11 @@ Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#i
 # Clone repository
 git clone git@github.com:activars/vim-config.git ~/.vim-config 
 
-# compile and install YCM
+# Compile and install YCM
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 
+# Symbolic linking configuration
 ln -s ~/.vimrc ~/.vim-config/.vimrc
 ln -s ~/.tmux.conf ~/.vim-config/.tmux.conf
 ```
