@@ -16,8 +16,12 @@ Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#i
 
 Installation
 ```bash
+# compile and install YCM
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
+
+ln -s ~/.vimrc ~/.vim-config/.vimrc
+ln -s ~/.tmux.conf ~/.vim-config/.tmux.conf
 ```
 
 
