@@ -19,6 +19,9 @@ Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#i
 #### Installation
 
 ```bash
+# Clone repository
+git clone git@github.com:activars/vim-config.git ~/.vim-config 
+
 # compile and install YCM
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
