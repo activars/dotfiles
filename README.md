@@ -20,15 +20,14 @@ Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#i
 
 ```bash
 # Clone repository
-git clone git@github.com:activars/vim-config.git ~/.vim-config 
+git clone git@github.com:activars/vim-config.git ~/.dotfiles
 
 # Compile and install YCM
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 
 # Symbolic linking configuration
-ln -s ~/.vimrc ~/.vim-config/.vimrc
-ln -s ~/.tmux.conf ~/.vim-config/.tmux.conf
+./install.sh
 ```
 
 
