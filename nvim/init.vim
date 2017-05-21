@@ -15,7 +15,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Themes
+Plug 'mhartington/oceanic-next'
 Plug 'sickill/vim-monokai'
+
+" Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Initialize plugin system
 call plug#end()
@@ -23,9 +29,10 @@ call plug#end()
 " ##### Plugin Configurations ######
 " === Color Theme
 syntax enable
-set background=dark
-
-colorscheme monokai
+if (has("termguicolors"))
+ set termguicolors
+endif
+colorscheme OceanicNext
 
 " === MacVim Font
 set guifont=Monaco:h14
@@ -41,4 +48,11 @@ let NERDTreeDirArrows = 1
 
 " === Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='molokai'
+let g:airline_theme='oceanicnext'
+
+" === Enable Autocomplete with deoplete
+let g:deoplete#enable_at_startup = 1
+" highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
+" highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff
+
+
