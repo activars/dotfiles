@@ -1,20 +1,12 @@
 ## vim-config
 
-This is a personal vim + tmux configuration repository.
+This is a personal vim + tmux configuration repository for NeoVim
 
-#### Install Plugin via Vundle
+#### Dependencies
 
-Under normal mode enter `:PluginInstall` to install plugins.
-
-#### Prerequisite 
-
-Install `cmake` on macOS
-```
-brew install cmake
-```
-
-Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#installation
-
+ - NeoVim
+ - Python and NeoVim module: `pip install neovim`
+ - vim-plug: https://github.com/junegunn/vim-plug
 
 #### Installation
 
@@ -22,12 +14,10 @@ Here's the instruction for other OS: https://github.com/Valloric/YouCompleteMe#i
 # Clone repository
 git clone git@github.com:activars/vim-config.git ~/.dotfiles
 
-# Compile and install YCM
-cd ~/.vim/bundle/YouCompleteMe
-./install.py
-
 # Symbolic linking configuration
 ./install.sh
 ```
 
+#### Install Plugin
 
+Under normal mode enter `:PlugInstall` to install plugins.
