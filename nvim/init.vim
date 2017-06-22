@@ -15,6 +15,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
+Plug 'vimlab/split-term.vim'
+
 
 " Themes
 Plug 'mhartington/oceanic-next'
@@ -26,13 +29,24 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Initialize plugin system
 call plug#end()
 
+" System Configuration
+set shell=/usr/bin/zsh
+
 " ##### Plugin Configurations ######
 " === Color Theme
 syntax enable
+
 if (has("termguicolors"))
- set termguicolors
+  set termguicolors
 endif
-colorscheme OceanicNext
+
+if &term == "xterm"
+  set t_Co=256
+endif
+
+colorscheme monokai
+
+let mapleader = ','
 
 " === MacVim Font
 set guifont=Monaco:h14
