@@ -1,29 +1,28 @@
-" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 " vim directory ~/.vim/plugged
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Make sure you use single quotes
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
-" Plugin outside ~/.vim/plugged with post-update hook
+" Pugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim'                         " Fuzzy search within the directory 
-Plug 'scrooloose/syntastic'                       
+Plug 'scrooloose/syntastic'                   " Code syntax validation and checking   
 Plug 'scrooloose/nerdtree'                    " Project side bar
-Plug 'tomtom/tcomment_vim'                    " Inline comments
+Plug 'tpope/vim-commentary'                       " Inline comments
 Plug 'vim-airline/vim-airline'                " Status Bar
 Plug 'vim-airline/vim-airline-themes'         " Themes
 Plug 'tomasr/molokai'                         " Themes
 Plug 'vimlab/split-term.vim'                  " Offer a terminal window  
-Plug 'vim-ctrlspace/vim-ctrlspace'            " 
 Plug 'sheerun/vim-polyglot'                   " Offers a large list of code syntax 
 Plug 'airblade/vim-gitgutter'                 " Display git changes in the left bar
 Plug 'tpope/vim-fugitive'                     " Git operation in vim without terminal
 Plug 'mhartington/oceanic-next'               " Themes
-Plug 'sickill/vim-monokai'                    " Themes
-
-" Autocomplete
+Plug 'chriskempson/base16-vim'                " Themes
+Plug 'tpope/vim-unimpaired'                   " move current line/selection up or down 
+" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " Autocomplete feature
 
 " Initialize plugin system
@@ -32,28 +31,31 @@ call plug#end()
 " System Configuration
 set shell=/usr/bin/zsh
 set number
+
 " ##### Plugin Configurations ######
 " === Color Theme
 syntax enable
 
 if (has("termguicolors"))
-  set termguicolors
+		set termguicolors
 endif
 
-if &term == "xterm"
-  set t_Co=256
-endif
+" if &term == "xterm"
+" 	set t_Co=256
+" endif
 
-colorscheme monokai
+colorscheme base16-default-dark
 
-" === ctrlspace Plugin 
-set nocompatible
-set hidden
-
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=red ctermbg=3
 " === Keymapping
-nnoremap <C-[> :bprevious<CR>
-nnoremap <C-]> :bnext<CR>
-nnoremap <C-w> :bdelete<CR>
+" nnoremap <C-[> :bprevious<CR>
+" nnoremap <C-]> :bnext<CR>
+" nnoremap <C-w> :bdelete<CR>
+
+nmap <C-Up> [e
+nmap <C-Down> ]e
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
 
 let mapleader = ','
 
@@ -65,6 +67,7 @@ set guifont=Monaco:h14
 map <Leader>n <esc>:NERDTreeToggle<cr>
 " Revel current file in NERDTree with <Leader>r
 map <Leader>r <esc>:NERDTreeToggle<cr>
+
 " Improves UI 
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
