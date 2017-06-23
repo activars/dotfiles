@@ -1,8 +1,10 @@
-## vim-config
+# vim-config
 
 This is a personal vim + tmux configuration repository.
 
 #### Install Plugin via Vundle
+
+
 
 Under normal mode enter `:PluginInstall` to install plugins.
 
