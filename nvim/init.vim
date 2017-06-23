@@ -44,6 +44,7 @@ endif
 " 	set t_Co=256
 " endif
 
+:set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
 colorscheme base16-default-dark
 
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=red ctermbg=3
