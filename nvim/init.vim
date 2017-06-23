@@ -51,8 +51,9 @@ set nocompatible
 set hidden
 
 " === Keymapping
-nnoremap <C-S-tab> :bprevious<CR>
-nnoremap <C-tab> :bnext<CR>
+nnoremap <C-[> :bprevious<CR>
+nnoremap <C-]> :bnext<CR>
+nnoremap <C-w> :bdelete<CR>
 
 let mapleader = ','
 
